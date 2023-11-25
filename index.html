@@ -15,13 +15,13 @@
     <main class="wrapper">
       <nav class="navigation-bar">
         <div class="logo">
-          <a href="https://www.shopify.com">
+          <a href="https://www.shopify.com" target="_blank">
             <img
               src="https://crushingit.tech/hackathon-assets/shopify-icon.svg"
               alt="shopify logo"
               class="mobile-logo"
           /></a>
-          <a href="https://www.shopify.com">
+          <a href="https://www.shopify.com" target="_blank">
             <img
               src="https://crushingit.tech/hackathon-assets/shopify-icon-desktop.svg"
               alt="shopify logo"
@@ -288,8 +288,8 @@
             Use this personalized guide to get your store up and running.
           </p>
           <div class="completion-bar">
-            <label for="progress" class="progress-text">1 / 5 completed</label>
-            <progress id="progress" value="1" max="5"></progress>
+            <label for="progress" class="progress-text">0 / 5 completed</label>
+            <progress id="progress" value="0" max="5"></progress>
           </div>
           <section class="setup-guide-options">
             <!-- SETUP GUIDE ONE -->
@@ -320,19 +320,22 @@
               </div>
               <div class="setup-guide-texts">
                 <h3>Customize your online store</h3>
-                <p>
-                  Choose a theme and add your logo, colors, and images to
-                  reflect your brand.
-                  <a href="https://shopify.com/">Learn more</a>
-                </p>
-                <button type="submit" class="btn btn-theme">
-                  Customize theme
-                </button>
+                <div class="toggle-text toggle-text-one hidden">
+                  <p>
+                    Choose a theme and add your logo, colors, and images to
+                    reflect your brand.
+                    <a href="https://shopify.com/">Learn more</a>
+                  </p>
+                  <button type="submit" class="btn btn-theme">
+                    Customize theme
+                  </button>
+                </div>
               </div>
               <div class="setup-guide-image">
                 <img
                   src="https://crushingit.tech/hackathon-assets/customise-store.png"
-                  alt="an image that contains a paintbrush with blue paint and four colors0"
+                  alt="an image that contains a paintbrush with blue paint and four colors"
+                  class="hidden"
                 />
               </div>
             </div>
@@ -365,22 +368,27 @@
               </div>
               <div class="setup-guide-texts">
                 <h3>Add your first product</h3>
-                <p>
-                  Write a description, add photos, and set pricing for the
-                  products you plan to sell.
-                  <a href="https://shopify.com/">Learn more</a>
-                </p>
-                <div class="buttons">
-                  <button type="submit" class="btn btn-add">Add product</button>
-                  <button type="submit" class="btn-import">
-                    Import product
-                  </button>
+                <div class="toggle-text toggle-text-two hidden">
+                  <p>
+                    Write a description, add photos, and set pricing for the
+                    products you plan to sell.
+                    <a href="https://shopify.com/">Learn more</a>
+                  </p>
+                  <div class="buttons">
+                    <button type="submit" class="btn btn-add">
+                      Add product
+                    </button>
+                    <button type="submit" class="btn-import">
+                      Import product
+                    </button>
+                  </div>
                 </div>
               </div>
               <div class="setup-guide-image">
                 <img
                   src="https://crushingit.tech/hackathon-assets/product.png"
-                  alt="Products"
+                  alt="an image showing a t-shirt, a pair of eye-glass, and a shoe"
+                  class="hidden"
                 />
               </div>
             </div>
@@ -413,19 +421,22 @@
               </div>
               <div class="setup-guide-texts">
                 <h3>Add a custom domain</h3>
-                <p>
-                  Your current domain is 222219.myshopify.com but you can add a
-                  custom domain to help customers find your online store.
-                  <a href="https://shopify.com/">Learn more</a>
-                </p>
-                <button type="submit" class="btn btn-add-domain">
-                  Add domain
-                </button>
+                <div class="toggle-text toggle-text-three hidden">
+                  <p>
+                    Your current domain is 222219.myshopify.com but you can add
+                    a custom domain to help customers find your online store.
+                    <a href="https://shopify.com/">Learn more</a>
+                  </p>
+                  <button type="submit" class="btn btn-add-domain">
+                    Add domain
+                  </button>
+                </div>
               </div>
               <div class="setup-guide-image">
                 <img
                   src="https://crushingit.tech/hackathon-assets/website.png"
-                  alt="www custom domain"
+                  alt="image showing the web icon and www"
+                  class="hidden"
                 />
               </div>
             </div>
@@ -458,17 +469,20 @@
               </div>
               <div class="setup-guide-texts">
                 <h3>Name your store</h3>
-                <p>
-                  Your temporary store name is currently Davii collections. The
-                  store name appears in your admin and your online store.
-                  <a href="https://shopify.com/">Learn more</a>
-                </p>
-                <button type="submit" class="btn btn-name">Name store</button>
+                <div class="toggle-text toggle-text-four hidden">
+                  <p>
+                    Your temporary store name is currently Davii collections.
+                    The store name appears in your admin and your online store.
+                    <a href="https://shopify.com/">Learn more</a>
+                  </p>
+                  <button type="submit" class="btn btn-name">Name store</button>
+                </div>
               </div>
               <div class="setup-guide-image">
                 <img
                   src="https://crushingit.tech/hackathon-assets/name-store.png"
-                  alt="store dashboard"
+                  alt="am image showing someone wearing a t-shirt"
+                  class="hidden"
                 />
               </div>
             </div>
@@ -501,20 +515,23 @@
               </div>
               <div class="setup-guide-texts">
                 <h3>Set up a payment provider</h3>
-                <p>
-                  Choose a payment provider to start accepting payments. You’ll
-                  need to create an account with the payment provider and set it
-                  up with your Shopify store.
-                  <a href="https://shopify.com/">Learn more</a>
-                </p>
-                <button type="submit" class="btn btn-setup">
-                  Set up payment
-                </button>
+                <div class="toggle-text toggle-text-five hidden">
+                  <p>
+                    Choose a payment provider to start accepting payments.
+                    You’ll need to create an account with the payment provider
+                    and set it up with your Shopify store.
+                    <a href="https://shopify.com/">Learn more</a>
+                  </p>
+                  <button type="submit" class="btn btn-setup">
+                    Set up payment
+                  </button>
+                </div>
               </div>
               <div class="setup-guide-image">
                 <img
                   src="https://crushingit.tech/hackathon-assets/payment.png"
-                  alt="visa atm card"
+                  alt="an image showing the visa logo and mastercard logo"
+                  class="hidden"
                 />
               </div>
             </div>

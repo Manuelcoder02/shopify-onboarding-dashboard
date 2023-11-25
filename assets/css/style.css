@@ -205,7 +205,8 @@ li {
   border: 1px solid #dbdbdb;
   border-radius: 14px;
   color: var(--font-dark, var(--grey-g-200, #303030));
-  /* padding: 1em; */
+  animation: growDown 300ms ease-in-out;
+  transform-origin: top center;
   box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.05);
 
   & .account-header {
@@ -299,7 +300,7 @@ li {
       }
       &:focus {
         background-color: #fff;
-        border: 2px solid var(--states-focused, #005bd3);
+        border: 2px solid #005bd3;
       }
     }
   }
@@ -386,6 +387,23 @@ li {
 .arrow-down {
   visibility: hidden;
 }
+.arrow-up,
+.arrow-down {
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background-color 0.3s ease-in-out, border 0.3s ease-in-out;
+
+  &:hover {
+    background-color: #f1f1f1;
+  }
+  &:active {
+    background-color: var(--states-pressed, #f0f0f0);
+  }
+  &:focus {
+    background-color: #fff;
+    border: 2px solid var(--states-focused, #005bd3);
+  }
+}
 .setup-text {
   color: #303030;
   font-weight: 400;
@@ -419,21 +437,27 @@ progress::-webkit-progress-bar {
 
 /* SETUP GUIDE ONE */
 .guide_card {
-  border: 3px solid red;
   display: flex;
+  align-items: center;
   gap: 1em;
-  background: #f3f3f3;
+  /* background: #f3f3f3; */
   padding: 8px 8px 12px 8px;
   border-radius: 10px;
+  margin: 0.5em 0;
+  transition: background-color 0.3s ease-in-out;
   & .check-btn {
     background: none;
     border: none;
   }
-  & .setup-guide-texts h3 {
-    font-size: 13px;
-    font-weight: 600;
-    color: var(--font-dark, var(--grey-g-200, #303030));
-    margin-bottom: 1em;
+  & .setup-guide-texts {
+    /* width: 100%; */
+
+    & h3 {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--font-dark, var(--grey-g-200, #303030));
+      margin-bottom: 1em;
+    }
   }
   & p {
     color: var(--font-mid-2, #616161);
@@ -445,6 +469,7 @@ progress::-webkit-progress-bar {
       &:link,
       :visited {
         color: #005bd3;
+        font-size: 14px;
       }
     }
   }
@@ -463,6 +488,7 @@ progress::-webkit-progress-bar {
     font-weight: 600;
     transition: background-color 0.3s ease-in-out, border 0.3s ease-in-out,
       box-shadow 0.3s ease-in-out;
+    cursor: pointer;
     &:hover {
       background-color: #2a2a2a;
     }
@@ -482,6 +508,21 @@ progress::-webkit-progress-bar {
     }
   }
 }
+
+.buttons {
+  display: flex;
+  gap: 1em;
+
+  & .btn-import {
+    background: none;
+    border: none;
+    color: var(--font-dark, #323232);
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+  }
+}
+
 .setup-guide-image {
   display: none;
 }
@@ -533,5 +574,12 @@ progress::-webkit-progress-bar {
   .setup-guide {
     margin: 2em auto;
     border-radius: 10px;
+    & .setup-guide-texts {
+      width: 65%;
+    }
+    & .setup-guide-image {
+      display: block;
+      align-self: center;
+    }
   }
 }
