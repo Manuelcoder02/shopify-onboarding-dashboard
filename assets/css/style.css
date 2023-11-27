@@ -314,7 +314,8 @@ li {
 .plan-selection {
   background-color: #1a1a1a;
   color: #fff;
-  margin: 2em 0;
+  margin-top: 2em;
+  margin-bottom: 0.5em;
   padding: 0.5em 0;
   max-width: 850px;
 }
@@ -446,6 +447,10 @@ progress::-webkit-progress-bar {
 .background-color {
   background-color: #f3f3f3;
 }
+.guide-image {
+  animation: growDown 300ms ease-in-out;
+  transform-origin: top center;
+}
 /* SETUP GUIDE ONE */
 .guide_card {
   display: flex;
@@ -461,9 +466,25 @@ progress::-webkit-progress-bar {
     align-self: flex-start;
   }
 
+  .checkbox-input {
+    display: none;
+  }
   & .check-btn {
-    background: none;
-    border: none;
+    background-color: transparent;
+    border: 1px solid transparent;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    & .select-icon {
+      cursor: pointer;
+    }
+
+    & .select-checked-icon {
+      cursor: pointer;
+      display: none;
+    }
   }
   & .setup-guide-texts {
     /* width: 100%; */
@@ -573,7 +594,9 @@ progress::-webkit-progress-bar {
   }
   /* PLAN SELECTION */
   .plan-selection {
-    margin: 2em auto;
+    /* margin-bottom: 0.5em; */
+    margin-left: auto;
+    margin-right: auto;
     border-radius: 10px;
   }
   .plan-selection {
@@ -593,8 +616,11 @@ progress::-webkit-progress-bar {
   }
   /* SETUP GUIDE */
   .setup-guide {
-    margin: 2em auto;
+    /* margin: 2em auto; */
+    margin-left: auto;
+    margin-right: auto;
     border-radius: 10px;
+    margin-top: 0.5em;
     & .setup-guide-texts {
       width: 65%;
     }
